@@ -10,10 +10,6 @@ RUN apt-get update && \
 
 RUN mkdir -p /var/run/prosody && chown prosody:prosody /var/run/prosody
 
-COPY ./entrypoint.sh /entrypoint.sh
-RUN chmod 755 /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
-
 RUN mkdir -p /etc/prosody/conf.d
 RUN mkdir -p /etc/prosody/vhost.d
 RUN mkdir -p /etc/prosody/cmpt.d
